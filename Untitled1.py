@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 import cv2
 import mediapipe as mp
@@ -10,32 +5,18 @@ import numpy as np
 import time
 
 
-# In[2]:
-
-
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(min_detection_confidence = 0.5 , min_tracking_confidence = 0.5)
-
-
-# In[3]:
 
 
 mp_drawing = mp.solutions.drawing_utils
 
 
-# In[4]:
-
-
 drawing_spec = mp_drawing.DrawingSpec(thickness=1,circle_radius=1)
 
 
-# In[5]:
-
-
 cap = cv2.VideoCapture(0)
-
-
-# In[6]:
+ 
 
 
 while cap.isOpened():
